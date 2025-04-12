@@ -17,15 +17,15 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <link rel="icon" type="image/x-icon" href="img/Jeyko.dev logo.png" />
-    <meta
-      name="description"
-      content="Je suis un développeur web freelance. Je crée des sites modernes, responsives et performants, en mettant l'accent sur l'expérience utilisateur et l'innovation pour particuliers et professionnels. Découvrez mon portfolio et mes projets."
-    />
-    <meta name="author" content="Jeyko" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact ⎮ Jeyko - Développeur web Freelance</title>
+    <meta
+      name="description"
+      content="Contactez Jean, développeur web freelance, pour discuter de votre projet web. Réponse rapide par mail ou via le formulaire de contact."
+    />
+    <meta name="author" content="Jean Volcy" />
+    <title>Contact | Jeyko - Développeur Web Freelance</title>
+    <link rel="icon" type="image/x-icon" href="img/Jeyko.dev logo.png" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/portfolio.css" />
@@ -33,30 +33,29 @@
   <body>
     <header>
       <div class="container">
-        <!-- Logo video -->
         <div class="logo">
           <video autoplay muted loop playsinline>
             <source src="img/Jean VOLCY.mp4" type="video/mp4" />
-            Votre navigateur ne suporte pas les videos HTML5.
+            Votre navigateur ne supporte pas les vidéos HTML5.
           </video>
         </div>
-        <!-- Navigation -->
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">À propos de moi</a></li>
             <li><a href="projects.html">Projets</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
+
     <main>
       <section id="contact">
         <h1>Contactez-moi</h1>
         <p>
-          N'hésitez pas à me contacter via le formulaire ci-dessous ou
-          directement par email ou via mes réseaux sociaux.
+          Envie de discuter d’un projet web ? Remplissez le formulaire
+          ci-dessous ou contactez-moi directement par email ou via mes réseaux.
         </p>
 
         <form
@@ -72,6 +71,7 @@
               name="name"
               placeholder="Votre nom"
               required
+              autocomplete="name"
             />
           </div>
 
@@ -82,7 +82,7 @@
               id="company"
               name="company"
               placeholder="Votre société"
-              required
+              autocomplete="organization"
             />
           </div>
 
@@ -94,8 +94,10 @@
               name="email"
               placeholder="Votre email"
               required
+              autocomplete="email"
             />
           </div>
+
           <div class="form-group">
             <label for="message">Message</label>
             <textarea
@@ -106,6 +108,7 @@
               required
             ></textarea>
           </div>
+
           <button type="submit">Envoyer</button>
         </form>
 
@@ -132,6 +135,7 @@
         </div>
       </section>
     </main>
+
     <footer>
       <p>
         &copy; 2025 Jeyko.dev |
