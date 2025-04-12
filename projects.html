@@ -17,15 +17,15 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <link rel="icon" type="image/x-icon" href="img/Jeyko.dev logo.png" />
-    <meta
-      name="description"
-      content="Je suis un développeur web freelance. Je crée des sites modernes, responsives et performants, en mettant l'accent sur l'expérience utilisateur et l'innovation pour particuliers et professionnels. Découvrez mon portfolio et mes projets."
-    />
-    <meta name="author" content="Jeyko" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mes Projets ⎮ Portfolio Développeur Web</title>
+    <meta
+      name="description"
+      content="Découvrez mes projets en développement web : sites vitrines, apps interactives, interfaces responsive créées avec HTML, CSS, JavaScript."
+    />
+    <meta name="author" content="Jean Volcy" />
+    <title>Mes Projets | Jeyko - Développeur Web Freelance</title>
+    <link rel="icon" type="image/x-icon" href="img/Jeyko.dev logo.png" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/portfolio.css" />
@@ -33,44 +33,41 @@
   <body>
     <header>
       <div class="container">
-        <!-- Logo video -->
         <div class="logo">
           <video autoplay muted loop playsinline>
             <source src="img/Jean VOLCY.mp4" type="video/mp4" />
-            Votre navigateur ne suporte pas les videos HTML5.
+            Votre navigateur ne supporte pas les vidéos HTML5.
           </video>
         </div>
-        <!-- Navigation -->
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">À propos de moi</a></li>
-            <li><a href="projects.html">Projets</a></li>
+            <li><a href="projects.html" aria-current="page">Projets</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
+
     <main>
       <section id="projects">
         <h1>Mes Projets</h1>
+
         <div class="project-grid">
           <article class="project">
             <img
               src="./img/aperçu portfolio.png"
-              alt="Aperçu du projet Mon portfolio"
+              alt="Aperçu de mon portfolio personnel"
             />
             <div class="project-details">
               <h3>Mon portfolio</h3>
               <p>
-                J'ai développé mon propre portfolio totalement fontionnel. La
-                conception de ce site permet de mettre en avant mes différents
-                projets réalisé. Conçu avec Html, CSS et un peu de JavaScript,
-                ce site offre une navigation fluide et tres simple.
+                J'ai développé mon propre portfolio 100% fonctionnel, en HTML,
+                CSS et JavaScript. Il met en avant mes réalisations de manière
+                fluide et responsive.
               </p>
-              <span>
-                <strong>Vous y ètes actuellement🎉 </strong>
-              </span>
+              <span><strong>Vous y êtes actuellement 🎉</strong></span>
               <div class="project-buttons">
                 <a href="index.html">Voir le projet</a>
                 <a
@@ -85,16 +82,14 @@
           <article class="project">
             <img
               src="./img/aperçu healthy.png"
-              alt="Aperçu du projet Healthy food"
+              alt="Aperçu du site HealthyFood"
             />
             <div class="project-details">
               <h3>HealthyFood</h3>
               <p>
-                J'ai développé un site de repas diététiques totalement
-                fontionnel, qu'on pourrait retrouvé sur internet. La conception
-                de ce site permet d'aller jusqu'au stade de la commande. Conçu
-                avec Html, CSS et JavaScript, ce site offre une navigation
-                fluide et simple.
+                Un site de repas diététiques permettant aux utilisateurs de
+                consulter des menus et passer commande. Design épuré, navigation
+                fluide, réalisé en HTML, CSS et JavaScript.
               </p>
               <div class="project-buttons">
                 <a href="https://kishny.github.io/HealthyFood/" target="_blank"
@@ -110,13 +105,13 @@
           </article>
 
           <article class="project">
-            <img src="./img/aperçu elium.png" alt="Aperçu du projet Elium" />
+            <img src="./img/aperçu elium.png" alt="Aperçu du site Elium" />
             <div class="project-details">
               <h3>Elium</h3>
               <p>
-                J'ai développé un site vitrine en ligne Elium. Conçu avec Html
-                et CSS. Ce site offre une navigation fluide avec un designe
-                épuré.
+                Site vitrine conçu avec HTML et CSS. Le site est fluide,
+                responsive, et présente une interface claire pour une navigation
+                agréable.
               </p>
               <div class="project-buttons">
                 <a href="https://elium-site.onrender.com" target="_blank"
@@ -132,15 +127,13 @@
           <article class="project">
             <img
               src="./img/aperçu country.png"
-              alt="Aperçu du projet Country app"
+              alt="Aperçu de l'application Country App"
             />
             <div class="project-details">
               <h3>Country App</h3>
               <p>
-                J'ai développé une application permettant d'améliorer sa culture
-                générale en découvrant ou redécouvrant les différents drapeaux
-                des pays du monde ainsi que leurs capitales et leurs nombres
-                d'habitants.
+                Application éducative sur les pays du monde : drapeaux,
+                capitales, populations. Développement en JS, design responsive.
               </p>
               <div class="project-buttons">
                 <a href="https://country-app-mvts.onrender.com" target="_blank"
@@ -156,13 +149,15 @@
           </article>
 
           <article class="project">
-            <img src="./img/aperçu quiz.png" alt="Aperçu du projet Quiz app" />
+            <img
+              src="./img/aperçu quiz.png"
+              alt="Aperçu de l'application Quiz App"
+            />
             <div class="project-details">
               <h3>Quiz App</h3>
               <p>
-                J'ai développé une application de quiz en ligne. L'utilisateur
-                peut choisir une réponse parmi les choix proposés et voir le
-                résultat à la fin.
+                Une app de quiz où l’utilisateur sélectionne des réponses et
+                obtient son score final. Réalisée avec HTML, CSS et JS.
               </p>
               <div class="project-buttons">
                 <a href="https://quiz-app-g7u1.onrender.com" target="_blank"
@@ -178,15 +173,13 @@
           <article class="project">
             <img
               src="./img/aperçu gaming.png"
-              alt="Aperçu du projet Gaming campus"
+              alt="Aperçu du site Gaming Campus"
             />
             <div class="project-details">
               <h3>Gaming Campus</h3>
               <p>
-                J'ai développé un site vitrine en ligne Gaming campus. Conçu
-                avec Html et CSS, ce site offre une navigation fluide avec un
-                design épuré et responsive pour s'adapter à tous les types
-                d'écran.
+                Site vitrine responsive conçu pour une école de jeux vidéo.
+                Structure HTML/CSS propre, navigation intuitive.
               </p>
               <div class="project-buttons">
                 <a
@@ -204,13 +197,12 @@
           </article>
 
           <article class="project">
-            <img src="./img/aperçu scroll.png" alt="Aperçu du projet Scroll" />
+            <img src="./img/aperçu scroll.png" alt="Aperçu du site Scroll" />
             <div class="project-details">
               <h3>Scroll</h3>
               <p>
-                J'ai développé un site vitrine en ligne Scroll. Conçu avec Html,
-                CSS et JavaScript, ce site offre une navigation fluide avec un
-                design épuré, ainsi que des animations sympatiques.
+                Site vitrine dynamique avec animations scroll. Réalisé en
+                HTML/CSS/JS pour démontrer mes capacités en interaction UI.
               </p>
               <div class="project-buttons">
                 <a href="https://scroll-hk5e.onrender.com" target="_blank"
@@ -226,14 +218,13 @@
           <article class="project">
             <img
               src="./img/aperçu calculator.png"
-              alt="Aperçu du Data Calculator"
+              alt="Aperçu de l'application Data Calculator"
             />
             <div class="project-details">
-              <h3>Data calculator</h3>
+              <h3>Data Calculator</h3>
               <p>
-                J'ai développé une application en ligne de calcul de tarif de
-                nuitée en fonction des dates séléctionnées. Conçu avec Html, CSS
-                et JavaScript, ce site offre une navigation fluide et simple.
+                Une application pour calculer le tarif d’une nuitée selon les
+                dates choisies. HTML, CSS, JS – simple, rapide, efficace.
               </p>
               <div class="project-buttons">
                 <a
@@ -249,11 +240,9 @@
               </div>
             </div>
           </article>
-
-          <!-- Structure a répéter pour chaque projet -->
         </div>
 
-        <p class="p-emoji">D'autres projets en cours de réalisation.</p>
+        <p class="p-emoji">D'autres projets sont en cours de réalisation 🚧</p>
       </section>
     </main>
 
