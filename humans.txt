@@ -1,0 +1,13 @@
+/* TEAM */
+Developer: Jean Volcy (aka Jeyko)
+Site: https://jeyko.dev
+GitHub: https://github.com/Kishny
+Email: contact.jeyko.dev@gmail.com
+
+/* SITE */
+Last update: 2025-04-12
+Technologies: HTML, CSS, JavaScript, Render, GitHub
+
+/* THANKS */
+Thanks to the open source community ❤️
+Inspired by clean code & passion for the web.
