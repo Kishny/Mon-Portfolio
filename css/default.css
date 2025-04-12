@@ -1,0 +1,219 @@
+/* Header */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px; /* Fusion des deux déclarations de padding */
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+/* Logo */
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  flex-shrink: 0; /* Empêche le logo de rétrécir */
+  max-width: 100%;
+}
+
+/* Navigation */
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1em; /* Espacement entre les éléments de la liste */
+  position: relative;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5em 1em;
+  display: block; /* Pour que le padding et le hover fonctionnent correctement */
+  transition: background-color 0.3s, transform 0.3s; /* Transition pour le hover */
+}
+
+header nav a:hover,
+header nav a.active {
+  background-color: #f39c12;
+  color: #fff;
+  border-radius: 5px;
+  transform: scale(1.05); /* Effet de zoom au survol */
+  cursor: pointer;
+  text-decoration: overline;
+}
+
+/* Sidebar */
+footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  text-decoration: none;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ******************************* Média queries ************************************* */
+/* Média queries générales pour une adaptation responsive optimale */
+
+/* Petits écrans (smartphones) */
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto; /* Centrage horizontal parfait */
+  }
+
+  .project {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto; /* Ajoute un centrage supplémentaire */
+  }
+
+  main {
+    padding: 2em 1em; /* Ajuste un peu le padding latéral */
+  }
+
+  body {
+    overflow-x: hidden; /* Empêche tout débordement horizontal */
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 2em;
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+
+  main p {
+    font-size: 1.2rem;
+    padding: 20px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .project {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto; /* Centrer les projets */
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  header nav ul li {
+    margin-left: 0;
+  }
+
+  .logo video {
+    width: 70px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Écrans moyens (tablettes) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  main {
+    padding: 5em;
+  }
+
+  main h1 {
+    font-size: 2.5rem;
+  }
+
+  main p {
+    font-size: 1.5rem;
+    padding: 30px;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    gap: 0.8em;
+  }
+
+  .logo video {
+    width: 80px;
+  }
+
+  .sidebar {
+    padding: 0.6em;
+  }
+
+  .sidebar li a img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Grands écrans (ordinateurs) */
+@media (min-width: 1025px) {
+  main {
+    padding: 10em 5em;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .logo video {
+    width: 90px;
+  }
+
+  .sidebar {
+    padding: 0.8em;
+  }
+
+  .sidebar li a img {
+    width: 24px;
+    height: 24px;
+  }
+}
