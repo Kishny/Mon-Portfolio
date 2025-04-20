@@ -1,0 +1,77 @@
+main {
+  position: relative;
+  overflow: hidden;
+}
+
+.temoignages-section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.temoignages-section h1 {
+  margin-bottom: 3rem;
+}
+.temoignage {
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.temoignage h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #111;
+}
+.temoignage p {
+  font-style: italic;
+  color: #555;
+}
+
+.logo-marquee {
+  margin-top: 4rem;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #f9f9f9;
+  padding: 1rem 0;
+}
+.logo-marquee img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin: 0 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+  animation: slide 20s linear infinite;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 600px) {
+  .temoignage {
+    padding: 1rem;
+  }
+
+  .temoignage h3 {
+    font-size: 1rem;
+  }
+
+  .temoignage p {
+    font-size: 0.95rem;
+  }
+
+  .logo-marquee img {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+  }
+}

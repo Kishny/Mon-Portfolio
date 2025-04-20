@@ -1,0 +1,76 @@
+
+/* ====================================
+   Responsive.css - Mobile First Design
+   Auteur : Jean Volcy
+   ==================================== */
+
+/* ------- Styles Mobile par défaut ------- */
+/* Ici tu peux forcer des styles adaptés aux petits écrans (320px à 599px) */
+
+.temoignages-section {
+  padding: 2rem 1rem;
+}
+
+.temoignage {
+  padding: 1rem;
+}
+
+.logo-marquee img {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+}
+
+/* ------- Tablettes et petits laptops (≥ 600px) ------- */
+@media (min-width: 600px) {
+  .temoignages-section {
+    padding: 3rem 2rem;
+  }
+
+  .temoignage {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+  .logo-marquee img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* ------- Laptops standard (≥ 900px) ------- */
+@media (min-width: 900px) {
+  .temoignages-section {
+    padding: 4rem 3rem;
+  }
+
+  .temoignage {
+    font-size: 1.1rem;
+    max-width: 700px;
+  }
+
+  .logo-marquee img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* ------- Grands écrans et desktops (≥ 1200px) ------- */
+@media (min-width: 1200px) {
+  .temoignages-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .temoignage h3 {
+    font-size: 1.3rem;
+  }
+
+  .temoignage p {
+    font-size: 1.1rem;
+  }
+
+  .logo-marquee img {
+    width: 90px;
+    height: 90px;
+  }
+}
