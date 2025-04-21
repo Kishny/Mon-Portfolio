@@ -75,3 +75,100 @@ main {
     margin: 0 10px;
   }
 }
+
+.ajout-temoignage {
+  margin: 3rem auto;
+  max-width: 700px;
+  background: #fff;
+  padding: 2rem;
+  border: 2px solid #f39c12;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ajout-temoignage h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #f39c12;
+}
+
+.form-temoignage {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-temoignage input,
+.form-temoignage textarea {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-temoignage input:focus,
+.form-temoignage textarea:focus {
+  border-color: #f39c12;
+  outline: none;
+}
+
+.form-temoignage button {
+  background-color: #f39c12;
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-temoignage button:hover {
+  background-color: #e08e0b;
+}
+
+.admin-access {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#admin-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#admin-toggle:hover {
+  transform: scale(1.1);
+}
+
+#admin-box {
+  margin-top: 1rem;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+#admin-box input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+#admin-box button {
+  margin-left: 10px;
+  padding: 0.5rem 1rem;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#admin-box button:hover {
+  background-color: #e08e0b;
+}
