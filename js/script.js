@@ -115,17 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Menu hamburger
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("nav-menu");
-
-  if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-      navMenu.classList.toggle("show");
-      hamburger.classList.toggle("active");
-    });
-  }
-
   // Animation du texte de contact
   const contactText = document.getElementById("animated-contact-text");
   if (contactText) {

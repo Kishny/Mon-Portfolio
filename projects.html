@@ -75,18 +75,12 @@
           <img src="img/Jeyko.dev logo.png" alt="Logo Jeyko.dev" />
         </div>
 
-        <!-- Bouton hamburger -->
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <!-- Menu de navigation -->
-        <nav>
+        <!-- Navigation -->
+        <nav id="nav-menu">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">À propos de moi</a></li>
-            <li><a href="projects.html" aria-current="page">Projets</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="projects.html">Projets</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="temoignages.html">Témoignages</a></li>
           </ul>
@@ -329,6 +323,45 @@
         &copy; 2025 Jeyko.dev | Développeur Web Freelance | Tous droits réservés
       </p>
     </footer>
+    <!-- Barre de navigation mobile fixe en bas -->
+    <nav class="bottom-nav">
+      <a href="index.html" class="nav-link" id="nav-accueil">
+        <img src="icons/home.svg" alt="Accueil" />
+        <span>Accueil</span>
+      </a>
+      <a href="about.html" class="nav-link" id="nav-about">
+        <img src="icons/user.svg" alt="À propos" />
+        <span>À propos</span>
+      </a>
+      <a href="projects.html" class="nav-link" id="nav-projects">
+        <img src="icons/folder.svg" alt="Projets" />
+        <span>Projets</span>
+      </a>
+      <a href="contact.html" class="nav-link" id="nav-contact">
+        <img src="icons/mail.svg" alt="Contact" />
+        <span>Contact</span>
+      </a>
+      <a href="temoignages.html" class="nav-link" id="nav-avis">
+        <img src="icons/star.svg" alt="Témoignages" />
+        <span>Avis</span>
+      </a>
+    </nav>
+
+    <script>
+      // Active le lien correspondant à la page actuelle
+      const path = window.location.pathname;
+
+      if (path.includes("index"))
+        document.getElementById("nav-accueil")?.classList.add("active");
+      else if (path.includes("about"))
+        document.getElementById("nav-about")?.classList.add("active");
+      else if (path.includes("projects"))
+        document.getElementById("nav-projects")?.classList.add("active");
+      else if (path.includes("contact"))
+        document.getElementById("nav-contact")?.classList.add("active");
+      else if (path.includes("temoignages"))
+        document.getElementById("nav-avis")?.classList.add("active");
+    </script>
 
     <script src="js/script.js"></script>
   </body>
