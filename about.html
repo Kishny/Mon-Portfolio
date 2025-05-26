@@ -73,13 +73,17 @@
   <body>
     <header>
       <div class="container">
-        <!-- Logo vidéo -->
+        <!-- Logo image -->
         <div class="logo">
-          <video autoplay muted loop playsinline>
-            <source src="img/Jean VOLCY.mp4" type="video/mp4" />
-            Votre navigateur ne supporte pas les vidéos HTML5.
-          </video>
+          <img src="img/Jeyko.dev logo.png" alt="Logo Jeyko.dev" />
         </div>
+
+         <!-- Bouton hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <!-- Navigation -->
         <nav>
           <ul>
@@ -96,8 +100,13 @@
     </header>
 
     <main>
-      <h1>À propos de moi</h1>
-      <section id="about">
+      <section id="about" class="fade-in">
+        <div class="about-title-wrapper">
+            <h1 id="about-title">🧑🏿‍💻 À propos de moi</h1>
+            <span class="sub-text" id="animated-sub-text"></span>
+          </div>
+        </div>
+
         <p>
           Je suis <span>Jean, un développeur web passionné</span> par la
           création d'interfaces utilisateur attrayantes et fonctionnelles. Je me
@@ -162,12 +171,47 @@
 
     <footer>
       <p>
-        &copy; 2025 Jeyko.dev |
-        <a href="https://github.com/Kishny" target="_blank">GitHub</a> |
-        <a href="https://instagram.com/jeyko.dev" target="_blank">Instagram</a>
+        &copy; 2025 Jeyko.dev | Développeur Web Freelance | Tous droits réservés
       </p>
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+      const phrases = [
+        "Touchez le code avec passion ⚡",
+        "Laissez parler le clavier 🧠",
+        "Du front au back, voici l’humain derrière le clavier 👨🏿‍💻",
+      ];
+
+      const textElement = document.getElementById("animated-sub-text");
+
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      function typeLoop() {
+        const currentPhrase = phrases[phraseIndex];
+        const visibleText = currentPhrase.substring(0, charIndex);
+        textElement.textContent = visibleText;
+
+        textElement.style.width = `${visibleText.length + 1}ch`;
+
+        if (!isDeleting && charIndex < currentPhrase.length) {
+          charIndex++;
+          setTimeout(typeLoop, 80);
+        } else if (isDeleting && charIndex > 0) {
+          charIndex--;
+          setTimeout(typeLoop, 40);
+        } else {
+          isDeleting = !isDeleting;
+          if (!isDeleting) {
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+          }
+          setTimeout(typeLoop, 1000);
+        }
+      }
+
+      typeLoop();
+    </script>
   </body>
 </html>

@@ -1,235 +1,381 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Témoignages | Jean Volcy - Développeur Web Freelance</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Témoignages | Jean Volcy - Développeur Web Freelance</title>
+    <meta
+      name="description"
+      content="Découvrez les avis clients et témoignages de collaborations avec Jean Volcy, développeur web freelance."
+    />
+    <meta
+      name="keywords"
+      content="Jean Volcy, témoignages, recommandations, clients, avis, freelance, développeur web"
+    />
+    <meta name="author" content="Jean Volcy" />
+    <link rel="canonical" href="https://www.jeyko.dev/temoignages.html" />
 
-  <meta name="description"
-    content="Découvrez les avis clients et témoignages de collaborations avec Jean Volcy, développeur web freelance." />
-  <meta name="keywords" content="Jean Volcy, témoignages, recommandations, clients, avis, freelance, développeur web" />
-  <meta name="author" content="Jean Volcy" />
-  <link rel="canonical" href="https://www.jeyko.dev/temoignages.html" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Témoignages | Jean Volcy" />
+    <meta
+      property="og:description"
+      content="Découvrez les témoignages et avis de mes clients."
+    />
+    <meta property="og:url" content="https://www.jeyko.dev/temoignages.html" />
+    <meta
+      property="og:image"
+      content="https://www.jeyko.dev/img/Jeyko.dev%20logo.png"
+    />
+    <meta property="og:type" content="website" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Témoignages | Jean Volcy" />
-  <meta property="og:description" content="Découvrez les témoignages et avis de mes clients." />
-  <meta property="og:url" content="https://www.jeyko.dev/temoignages.html" />
-  <meta property="og:image" content="https://www.jeyko.dev/img/Jeyko.dev%20logo.png" />
-  <meta property="og:type" content="website" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Témoignages | Jean Volcy" />
+    <meta
+      name="twitter:description"
+      content="Avis clients et partenaires de Jean Volcy, développeur web freelance."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.jeyko.dev/img/Jeyko.dev%20logo.png"
+    />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Témoignages | Jean Volcy" />
-  <meta name="twitter:description" content="Avis clients et partenaires de Jean Volcy, développeur web freelance." />
-  <meta name="twitter:image" content="https://www.jeyko.dev/img/Jeyko.dev%20logo.png" />
+    <link rel="icon" type="image/x-icon" href="img/Jeyko.dev logo.png" />
+    <link rel="manifest" href="manifest.json" />
 
-  <link rel="icon" type="image/x-icon" href="img/Jeyko.dev logo.png" />
-  <link rel="manifest" href="manifest.json" />
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <link rel="stylesheet" href="css/temoignages.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
 
-  <!-- Feuilles de style -->
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/default.css" />
-  <link rel="stylesheet" href="css/portfolio.css" />
-  <link rel="stylesheet" href="css/temoignages.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
+  <body>
+    <header>
+      <div class="container">
+        <!-- Logo image -->
+        <div class="logo">
+          <img src="img/Jeyko.dev logo.png" alt="Logo Jeyko.dev" />
+        </div>
 
-<body>
-  <header>
-    <div class="container">
-      <!-- Logo vidéo -->
-      <div class="logo">
-        <video autoplay muted loop playsinline>
-          <source src="img/Jean VOLCY.mp4" type="video/mp4" />
-          Votre navigateur ne supporte pas les vidéos HTML5.
-        </video>
+        <!-- Bouton hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="about.html" aria-current="page">À propos de moi</a>
+            </li>
+            <li><a href="projects.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="temoignages.html">Témoignages</a></li>
+          </ul>
+        </nav>
       </div>
-      <!-- Navigation -->
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li>
-            <a href="about.html" aria-current="page">À propos de moi</a>
-          </li>
-          <li><a href="projects.html">Projets</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="temoignages.html">Témoignages</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <!-- FORMULAIRE -->
-    <section class="ajout-temoignage">
-      <h2>Laisser un témoignage</h2>
-      <form id="form-temoignage" class="form-temoignage">
-        <input type="text" name="nom" placeholder="Votre nom" required />
-        <input type="text" name="fonction" placeholder="Votre fonction ou entreprise" required />
-        <textarea name="message" rows="5" placeholder="Votre témoignage..." required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
-
-      <!-- Message de confirmation -->
-      <div id="confirmation-message"
-        style="display: none; text-align: center; margin-top: 1rem; color: green; font-weight: bold;">
-        ✅ Merci pour votre témoignage !
+    <main class="temoignages-main">
+      <!-- Bouton vers formulaire -->
+      <div class="avis-button-wrapper">
+        <button
+          class="avis-button"
+          onclick="document.getElementById('avis-form-section').scrollIntoView({ behavior: 'smooth' })"
+        >
+          ✨ Donner aussi votre avis
+        </button>
       </div>
-    </section>
 
-    <!-- CONTAINER POUR LES TÉMOIGNAGES -->
-    <div id="temoignages-container"></div>
+      <!-- Témoignages -->
+      <section id="temoignages-section">
+        <h2 class="temoignages-title">Ils m'ont fait confiance</h2>
+        <div class="temoignage-container">
+          <button class="nav-arrow" id="prev-temoignage">‹</button>
+          <div class="temoignage-card" id="temoignage-card"></div>
+          <button class="nav-arrow" id="next-temoignage">›</button>
+        </div>
+        <div class="temoignage-pagination" id="temoignage-pagination"></div>
+      </section>
 
-    <!-- ACCÈS ADMIN -->
-    <div class="admin-access">
-      <button id="admin-toggle" onclick="toggleAdmin()">🔒</button>
-      <div id="admin-box">
-        <input type="password" id="admin-password" placeholder="Mot de passe admin" />
-        <button onclick="checkAdminPassword()">Valider</button>
+      <!-- À placer entre les sections -->
+      <div class="wave-separator">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+          <path d="M0,0 C360,100 1080,0 1440,100 L1440,0 L0,0 Z" fill="#f4efff">
+            <animate
+              attributeName="d"
+              dur="8s"
+              repeatCount="indefinite"
+              values="
+          M0,0 C360,100 1080,0 1440,100 L1440,0 L0,0 Z;
+          M0,0 C260,80 1180,20 1440,100 L1440,0 L0,0 Z;
+          M0,0 C360,100 1080,0 1440,100 L1440,0 L0,0 Z
+        "
+            />
+          </path>
+        </svg>
       </div>
-    </div>
 
+      <!-- Formulaire -->
+      <section class="avis-form" id="avis-form-section">
+        <div class="avis-form-wrapper">
+          <div class="avis-contact-info">
+            <h3><i class="fa fa-comments"></i> On Vous lit !</h3>
+            <div class="avis-item">
+              <i class="fa fa-envelope"></i>
+              <div><strong>Email</strong><br />contact.jeyko.dev@gmail.com</div>
+            </div>
+            <div class="avis-item">
+              <i class="fa fa-phone"></i>
+              <div><strong>Téléphone</strong><br />+33753148607</div>
+            </div>
+          </div>
+          <form class="avis-form-fields" id="avis-form">
+            <div class="form-row full-width">
+              <div class="type-toggle">
+                <button
+                  type="button"
+                  class="toggle-option active"
+                  data-type="particulier"
+                >
+                  🙋‍♂️ Particulier
+                </button>
+                <button
+                  type="button"
+                  class="toggle-option"
+                  data-type="entreprise"
+                >
+                  🏢 Entreprise
+                </button>
+              </div>
+            </div>
+            <input
+              type="hidden"
+              name="type"
+              id="type-field"
+              value="particulier"
+            />
+            <div class="form-row">
+              <input
+                type="text"
+                name="prenom"
+                placeholder="Votre prénom..."
+                required
+              />
+              <input
+                type="text"
+                name="nom"
+                placeholder="Votre nom..."
+                required
+              />
+            </div>
+            <div class="form-row">
+              <div class="entreprise-container">
+                <input
+                  type="text"
+                  name="entreprise"
+                  id="entreprise-field"
+                  placeholder="Nom de l'entreprise (pro seulement)"
+                />
+              </div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Votre email..."
+                required
+              />
+            </div>
+            <textarea
+              name="message"
+              placeholder="Votre message..."
+              rows="5"
+              required
+            ></textarea>
+            <button type="submit">Soumettre</button>
+          </form>
+        </div>
+      </section>
 
-    <div class="temoignage">
-      <h3>Sarah Dupont, Gérante chez GreenStyle</h3>
-      <p>
-        "Jean a su comprendre nos besoins très rapidement et a livré un site
-        moderne, rapide et parfaitement responsive. Une vraie collaboration
-        fluide et efficace."
-      </p>
-    </div>
+      <!-- Modal -->
+      <div id="confirmationModal" class="modal hidden">
+        <div class="modal-content">
+          <span class="close-btn" id="closeModal">&times;</span>
+          <h2>Merci pour votre avis ! 🎉</h2>
+          <p>Votre témoignage a bien été enregistré.</p>
+          <a href="index.html" class="return-home">Retour à l'accueil</a>
+        </div>
+      </div>
+    </main>
+    <script>
+      const temoignages = [
+        {
+          logo: "img/logo1.png",
+          message:
+            "Jean a su transformer nos idées en réalité avec efficacité et précision.",
+          auteur: "Sarah Dupont",
+          fonction: "Directrice chez ROC",
+        },
+        {
+          logo: "img/logo2.png",
+          message:
+            "Un vrai pro ! Le site est rapide, moderne et parfaitement responsive.",
+          auteur: "Marc Lefèvre",
+          fonction: "Co fondateur de Mode & Motion",
+        },
+        {
+          logo: "img/logo3.png",
+          message:
+            "Merci Jean pour ta réactivité et ton écoute, je recommande à 100% !",
+          auteur: "Aïssata Koné",
+          fonction: "Responsable Marketing chez Jeyko Location",
+        },
+        {
+          logo: "img/logo4.png",
+          message:
+            "Un accompagnement fluide du début à la fin, avec des livrables impeccables.",
+          auteur: "David Morel",
+          fonction: "Fondateur de HealthyFood",
+        },
+      ];
 
-    <div class="temoignage">
-      <h3>Marc Lefèvre, CEO de StartInTech</h3>
-      <p>
-        "Professionnel, réactif et à l'écoute. Jean a dépassé nos attentes
-        dans la refonte de notre application web."
-      </p>
-    </div>
+      const card = document.getElementById("temoignage-card");
+      const pagination = document.getElementById("temoignage-pagination");
+      const prevBtn = document.getElementById("prev-temoignage");
+      const nextBtn = document.getElementById("next-temoignage");
+      const form = document.getElementById("avis-form");
+      const modal = document.getElementById("confirmationModal");
+      const closeModal = document.getElementById("closeModal");
+      const toggleButtons = document.querySelectorAll(".toggle-option");
+      const typeField = document.getElementById("type-field");
+      const entrepriseField = document.getElementById("entreprise-field");
 
-    <div class="temoignage">
-      <h3>Aïssata Koné, Responsable Com' chez Culture & Web</h3>
-      <p>
-        "Je recommande vivement Jean pour tout projet web. Le design, la
-        performance et la qualité du code sont au rendez-vous."
-      </p>
-    </div>
-    </section>
+      let index = 0;
+      let timer;
 
-    <div id="temoignages-container"></div>
+      function afficherTemoignage(i) {
+        const t = temoignages[i];
+        card.innerHTML = `
+    <img src="${t.logo}" alt="Logo client">
+    <p>"${t.message}"</p>
+    <div class="auteur">${t.auteur}</div>
+    <div class="fonction">${t.fonction}</div>
+  `;
+        pagination.innerHTML = "";
+        temoignages.forEach((_, j) => {
+          const dot = document.createElement("span");
+          dot.classList.toggle("active", j === i);
+          pagination.appendChild(dot);
+        });
+      }
 
-    <div class="logo-marquee">
-      <img src="img/logo1.png" alt="Client 1" />
-    </div>
-  </main>
+      function changerTemoignage(sens = 1) {
+        index = (index + sens + temoignages.length) % temoignages.length;
+        afficherTemoignage(index);
+      }
 
-  <script>
-  let isAdmin = false;
-  const form = document.getElementById("form-temoignage");
-  const container = document.getElementById("temoignages-container");
+      function boucleAuto() {
+        timer = setInterval(() => changerTemoignage(1), 12000);
+      }
 
-  // Soumission du formulaire
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
-    const data = {
-      nom: formData.get("nom"),
-      fonction: formData.get("fonction"),
-      message: formData.get("message"),
-    };
+      prevBtn.addEventListener("click", () => {
+        clearInterval(timer);
+        changerTemoignage(-1);
+        boucleAuto();
+      });
+      nextBtn.addEventListener("click", () => {
+        clearInterval(timer);
+        changerTemoignage(1);
+        boucleAuto();
+      });
 
-    await fetch("http://localhost:5001/api/temoignages", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+      toggleButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          toggleButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          typeField.value = btn.dataset.type;
+          entrepriseField.parentElement.style.display =
+            btn.dataset.type === "particulier" ? "none" : "block";
+        });
+      });
 
-    form.reset();
-    showConfirmationMessage();
-    loadTemoignages();
-  });
+      form?.addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-  // Message de confirmation
-  function showConfirmationMessage() {
-    const message = document.getElementById("confirmation-message");
-    message.style.display = "block";
+        const formData = new FormData(form);
 
-    setTimeout(() => {
-      message.style.display = "none";
-    }, 4000);
-  }
+        const prenom = formData.get("prenom")?.trim() || "";
+        const nom = formData.get("nom")?.trim() || "";
+        const entreprise = formData.get("entreprise")?.trim() || "";
+        const email = formData.get("email")?.trim() || "";
+        const type = formData.get("type") || "particulier";
+        const message = formData.get("message")?.trim() || "";
 
-  // Affichage dynamique des témoignages
-  async function loadTemoignages() {
-    const res = await fetch("http://localhost:5001/api/temoignages");
-    const temoignages = await res.json();
-    container.innerHTML = "";
+        // Construction de l’objet conforme à Mongoose
+        const data = {
+          nom: prenom + " " + nom,
+          fonction: entreprise || "Particulier",
+          message,
+          note: 5,
+          type,
+        };
+        console.log("Données envoyées :", data);
 
-    temoignages.forEach((t) => {
-      const div = document.createElement("div");
-      div.className = "temoignage";
-      div.innerHTML = `
-        <h3>${t.nom}, ${t.fonction}</h3>
-        <p>"${t.message}"</p>
-        ${
-          isAdmin
-            ? `<div style="margin-top:1rem;">
-                <button onclick="deleteTemoignage('${t._id}')">🗑 Supprimer</button>
-              </div>`
-            : ""
+        try {
+          const res = await fetch("http://localhost:5001/api/temoignages", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          });
+
+          if (res.ok) {
+            const responseData = await res.json();
+            console.log("Réponse serveur :", responseData);
+
+            form.reset();
+            typeField.value = "particulier";
+            toggleEntrepriseField();
+            modal.classList.add("visible");
+            setTimeout(() => modal.classList.remove("visible"), 5000);
+          } else {
+            const err = await res.json();
+            console.error("Erreur serveur :", err);
+            alert("Erreur lors de l'envoi du formulaire.");
+          }
+        } catch (err) {
+          console.error("Erreur réseau :", err);
+          alert("Une erreur réseau est survenue.");
         }
-      `;
-      container.appendChild(div);
-    });
-  }
+      });
 
-  // Suppression
-  async function deleteTemoignage(id) {
-    if (!confirm("Supprimer ce témoignage ?")) return;
-    await fetch(`http://localhost:5001/api/temoignages/${id}`, {
-      method: "DELETE",
-    });
-    loadTemoignages();
-  }
+      closeModal?.addEventListener("click", () =>
+        modal.classList.remove("visible")
+      );
 
-  // Admin : toggle et mot de passe
-  function toggleAdmin() {
-    if (isAdmin) {
-      isAdmin = false;
-      document.getElementById("admin-toggle").textContent = "🔒";
-      document.getElementById("admin-box").style.display = "block";
-      loadTemoignages();
-    } else {
-      document.getElementById("admin-box").style.display = "block";
-    }
-  }
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) modal.classList.remove("visible");
+      });
 
-  function checkAdminPassword() {
-    const password = document.getElementById("admin-password").value;
-    if (password === "admin123") {
-      isAdmin = true;
-      document.getElementById("admin-toggle").textContent = "🔓";
-      document.getElementById("admin-box").style.display = "none";
-      loadTemoignages();
-    } else {
-      alert("Mot de passe incorrect");
-    }
-  }
+      document.addEventListener("DOMContentLoaded", () => {
+        afficherTemoignage(index);
+        boucleAuto();
+        entrepriseField.parentElement.style.display = "none";
+      });
 
-  window.addEventListener("DOMContentLoaded", loadTemoignages);
-</script>
+      // Menu hamburger
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
 
-
-  <!-- Boîte de connexion admin -->
-  <div class="admin-access">
-    <button id="admin-toggle" onclick="toggleAdmin()">🔒</button>
-    <div id="admin-box">
-      <input type="password" id="admin-password" placeholder="Mot de passe admin" />
-      <button onclick="checkAdminPassword()">Valider</button>
-    </div>
-  </div>
-</body>
-
+      if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+          navMenu.classList.toggle("show");
+          hamburger.classList.toggle("active");
+        });
+      }
+    </script>
+  </body>
 </html>

@@ -79,39 +79,30 @@
   </head>
 
   <body>
-    <!-- Sidebar avec icônes -->
-    <aside class="sidebar">
-      <ul>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/jean-volcy-3499b22ba/"
-            target="_blank"
-            ><img src="icons/linkedin-brands-solid.svg" alt="LinkedIn"
-          /></a>
-        </li>
-        <li>
-          <a href="https://github.com/Kishny" target="_blank"
-            ><img src="icons/github-brands-solid.svg" alt="GitHub"
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/jeyko.dev/" target="_blank"
-            ><img src="icons/instagram-line.svg" alt="Instagram"
-          /></a>
-        </li>
-      </ul>
-    </aside>
+    <div id="loader">
+      <div class="loader-content">
+        <div class="loader-logo">
+          <img src="img/Jeyko.dev logo.png" alt="Logo Jeyko.dev" />
+        </div>
+        <p class="loader-text">Chargement de Jeyko...</p>
+      </div>
+    </div>
 
     <!-- Header -->
     <header>
       <div class="container">
-        <!-- Logo video -->
+        <!-- Logo image -->
         <div class="logo">
-          <video autoplay muted loop playsinline>
-            <source src="img/Jean VOLCY.mp4" type="video/mp4" />
-            Votre navigateur ne suporte pas les videos HTML5.
-          </video>
+          <img src="img/Jeyko.dev logo.png" alt="Logo Jeyko.dev" />
         </div>
+
+        <!-- Bouton hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         <!-- Navigation -->
         <nav>
           <ul>
@@ -126,15 +117,40 @@
     </header>
 
     <!-- Section principale -->
-    <main>
-      <h1>Hello, je suis Jean!!</h1>
-      <p>
-        "Passionné par le développement web, je conçois et construis des sites
-        modernes et performants, en mettant l'accent sur l'expérience
-        utilisateur et l'innovation."
-      </p>
+    <main class="main-content">
+      <h1 id="typed-title"></h1>
+      <p id="typed-text"></p>
       <a href="projects.html" class="btn">Projects</a>
     </main>
+
+    <!-- Sidebar -->
+    <aside class="social-footer">
+      <ul>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/jean-volcy-3499b22ba/"
+            target="_blank"
+          >
+            <img src="icons/linkedin-brands-solid.svg" alt="LinkedIn" />
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Kishny" target="_blank">
+            <img src="icons/github-brands-solid.svg" alt="GitHub" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/jeyko.dev/" target="_blank">
+            <img src="icons/instagram-line.svg" alt="Instagram" />
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <img src="icons/x-twitter-brands-solid.svg" alt="Twitter" />
+          </a>
+        </li>
+      </ul>
+    </aside>
 
     <script src="js/script.js"></script>
   </body>

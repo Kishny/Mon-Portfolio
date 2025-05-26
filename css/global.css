@@ -20,147 +20,15 @@ body {
   padding: 0;
 }
 
-/* ******************************* Média queries ************************************* */
-/* Média queries générales pour une adaptation responsive optimale */
-
-/* Petits écrans (smartphones) */
-@media (max-width: 600px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-    padding: 20px;
-    width: 90%;
-    margin: 0 auto; /* Centrage horizontal parfait */
-  }
-
-  .project {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto; /* Ajoute un centrage supplémentaire */
-  }
-
-  main {
-    padding: 2em 1em; /* Ajuste un peu le padding latéral */
-  }
-
-  body {
-    overflow-x: hidden; /* Empêche tout débordement horizontal */
-  }
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
 }
 
-@media (max-width: 600px) {
-  main {
-    padding: 2em;
-  }
-
-  main h1 {
-    font-size: 2rem;
-  }
-
-  main p {
-    font-size: 1.2rem;
-    padding: 20px;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-    padding: 20px;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .project {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto; /* Centrer les projets */
-  }
-
-  header .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    gap: 0.5em;
-  }
-
-  header nav ul li {
-    margin-left: 0;
-  }
-
-  .logo video {
-    width: 70px;
-  }
-
-  .sidebar {
-    display: none;
-  }
-}
-
-/* Écrans moyens (tablettes) */
-@media (min-width: 601px) and (max-width: 1024px) {
-  main {
-    padding: 5em;
-  }
-
-  main h1 {
-    font-size: 2.5rem;
-  }
-
-  main p {
-    font-size: 1.5rem;
-    padding: 30px;
-  }
-
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 30px;
-  }
-
-  header .container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  header nav ul {
-    flex-direction: row;
-    gap: 0.8em;
-  }
-
-  .logo video {
-    width: 80px;
-  }
-
-  .sidebar {
-    padding: 0.6em;
-  }
-
-  .sidebar li a img {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Grands écrans (ordinateurs) */
-@media (min-width: 1025px) {
-  main {
-    padding: 10em 5em;
-  }
-
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
-  .logo video {
-    width: 90px;
-  }
-
-  .sidebar {
-    padding: 0.8em;
-  }
-
-  .sidebar li a img {
-    width: 24px;
-    height: 24px;
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

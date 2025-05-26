@@ -1,0 +1,10 @@
+# Ignorer Node.js
+node_modules/
+api/node_modules/
+
+# Fichiers système Mac
+.DS_Store
+img/\303\247\247u mode.png
+
+# Dossiers temporaires
+*.log

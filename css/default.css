@@ -55,6 +55,103 @@ header nav a.active {
   text-decoration: overline;
 }
 
+/* HAMBURGER - caché par défaut */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #f39c12;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* MENU MOBILE - caché par défaut */
+#nav-menu {
+  display: none;
+}
+
+/* MOBILE (≤ 768px) : afficher hamburger + menu mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  #nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    animation: fadeSlide 0.3s ease forwards;
+    z-index: 1000;
+  }
+
+  #nav-menu.show {
+    display: flex;
+  }
+
+  #nav-menu ul {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header nav ul {
+    display: none; /* cache le menu horizontal classique */
+  }
+}
+
+/* DESKTOP (> 768px) : affichage du menu horizontal */
+@media (min-width: 769px) {
+  #nav-menu {
+    display: block;
+  }
+
+  #nav-menu ul {
+    display: flex;
+    gap: 1em;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Animation d’apparition */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Sidebar */
 footer {
   background-color: #f8f8f8;
@@ -75,145 +172,3 @@ footer a:hover {
 
 /* ******************************* Média queries ************************************* */
 /* Média queries générales pour une adaptation responsive optimale */
-
-/* Petits écrans (smartphones) */
-@media (max-width: 600px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-    padding: 20px;
-    width: 90%;
-    margin: 0 auto; /* Centrage horizontal parfait */
-  }
-
-  .project {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto; /* Ajoute un centrage supplémentaire */
-  }
-
-  main {
-    padding: 2em 1em; /* Ajuste un peu le padding latéral */
-  }
-
-  body {
-    overflow-x: hidden; /* Empêche tout débordement horizontal */
-  }
-}
-
-@media (max-width: 600px) {
-  main {
-    padding: 2em;
-  }
-
-  main h1 {
-    font-size: 2rem;
-  }
-
-  main p {
-    font-size: 1.2rem;
-    padding: 20px;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-    padding: 20px;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .project {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto; /* Centrer les projets */
-  }
-
-  header .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    gap: 0.5em;
-  }
-
-  header nav ul li {
-    margin-left: 0;
-  }
-
-  .logo video {
-    width: 70px;
-  }
-
-  .sidebar {
-    display: none;
-  }
-}
-
-/* Écrans moyens (tablettes) */
-@media (min-width: 601px) and (max-width: 1024px) {
-  main {
-    padding: 5em;
-  }
-
-  main h1 {
-    font-size: 2.5rem;
-  }
-
-  main p {
-    font-size: 1.5rem;
-    padding: 30px;
-  }
-
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 30px;
-  }
-
-  header .container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  header nav ul {
-    flex-direction: row;
-    gap: 0.8em;
-  }
-
-  .logo video {
-    width: 80px;
-  }
-
-  .sidebar {
-    padding: 0.6em;
-  }
-
-  .sidebar li a img {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Grands écrans (ordinateurs) */
-@media (min-width: 1025px) {
-  main {
-    padding: 10em 5em;
-  }
-
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
-  .logo video {
-    width: 90px;
-  }
-
-  .sidebar {
-    padding: 0.8em;
-  }
-
-  .sidebar li a img {
-    width: 24px;
-    height: 24px;
-  }
-}

@@ -5,8 +5,15 @@ const Temoignage = require("../models/Temoignage");
 // POST - Ajouter un témoignage
 router.post("/", async (req, res) => {
   try {
-    const { nom, fonction, message } = req.body;
-    const nouveau = new Temoignage({ nom, fonction, message });
+    const { nom, fonction, message, note, type } = req.body;
+
+    if (!nom || !fonction || !message || !note || !type) {
+      return res
+        .status(400)
+        .json({ success: false, error: "Champs requis manquants." });
+    }
+
+    const nouveau = new Temoignage({ nom, fonction, message, note, type });
     await nouveau.save();
     res.status(201).json({ success: true, data: nouveau });
   } catch (err) {

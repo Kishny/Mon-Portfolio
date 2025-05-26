@@ -65,17 +65,27 @@
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/portfolio.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
 
   <body>
     <header>
       <div class="container">
+        <!-- Logo image -->
         <div class="logo">
-          <video autoplay muted loop playsinline>
-            <source src="img/Jean VOLCY.mp4" type="video/mp4" />
-            Votre navigateur ne supporte pas les vidéos HTML5.
-          </video>
+          <img src="img/Jeyko.dev logo.png" alt="Logo Jeyko.dev" />
         </div>
+        <!-- Bouton hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <!-- Menu de navigation -->
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -90,10 +100,14 @@
 
     <main>
       <section id="contact">
-        <h1>Contactez-moi</h1>
+        <div class="contact-title-wrapper">
+          <h1 id="contact-title">📬 Contactez-moi</h1>
+          <span class="contact-sub-text" id="animated-contact-text"></span>
+        </div>
+
         <p>
           Envie de discuter d’un projet web ? Remplissez le formulaire
-          ci-dessous ou contactez-moi directement par email ou via mes réseaux.
+          ci-dessous ou contactez-moi directement.
         </p>
 
         <form
@@ -102,53 +116,55 @@
           method="POST"
         >
           <div class="form-group">
-            <label for="name">Nom</label>
             <input
               type="text"
               id="name"
               name="name"
-              placeholder="Votre nom"
+              placeholder=" "
               required
               autocomplete="name"
             />
+            <label for="name">Nom</label>
           </div>
 
           <div class="form-group">
-            <label for="company">Société</label>
             <input
               type="text"
               id="company"
               name="company"
-              placeholder="Votre société"
+              placeholder=" "
               autocomplete="organization"
             />
+            <label for="company">Société</label>
           </div>
 
           <div class="form-group">
-            <label for="email">Email</label>
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="Votre email"
+              placeholder=" "
               required
               autocomplete="email"
             />
+            <label for="email">Email</label>
           </div>
 
           <div class="form-group">
-            <label for="message">Message</label>
             <textarea
               id="message"
               name="message"
-              placeholder="Votre message"
+              placeholder=" "
               rows="5"
               required
             ></textarea>
+            <label for="message">Message</label>
           </div>
 
           <button type="submit">Envoyer</button>
         </form>
+
+        <div id="form-message" class="form-message hidden"></div>
 
         <div class="contact-info">
           <p>
@@ -157,28 +173,30 @@
               >contact.jeyko.dev@gmail.com</a
             >
           </p>
-          <p><strong>Réseaux sociaux :</strong></p>
-          <ul>
-            <li>
+
+          <div class="social-container">
+            <div class="social-icons">
+              <a href="https://github.com/Kishny" class="social-icon"
+                ><i class="fab fa-github"></i
+              ></a>
               <a
                 href="https://www.linkedin.com/in/jean-volcy-3499b22ba/"
-                target="_blank"
-                >LinkedIn</a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/Kishny" target="_blank">GitHub</a>
-            </li>
-          </ul>
+                class="social-icon"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/jeyko.dev/" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer>
       <p>
-        &copy; 2025 Jeyko.dev |
-        <a href="https://github.com/Kishny" target="_blank">GitHub</a> |
-        <a href="https://instagram.com/jeyko.dev" target="_blank">Instagram</a>
+        &copy; 2025 Jeyko.dev | Développeur Web Freelance | Tous droits réservés
       </p>
     </footer>
 
