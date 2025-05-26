@@ -1298,6 +1298,13 @@ button[type="submit"]:hover {
   }
 }
 
+/* Cacher la bottom-nav sur tablette et desktop */
+@media screen and (min-width: 769px) {
+  .bottom-nav {
+    display: none !important;
+  }
+}
+
 /* Grands écrans (min-width: 1025px) */
 @media (min-width: 1025px) {
   main {
