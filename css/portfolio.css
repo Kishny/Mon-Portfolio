@@ -133,7 +133,7 @@ header .container {
 /* Version mobile : remonte la social-footer au-dessus de la bottom-nav */
 @media screen and (max-width: 768px) {
   .social-footer {
-    bottom: 150px; /* remonte la barre plus haut, au-dessus de la bottom-nav */
+    bottom: 95px; /* remonte la barre plus haut, au-dessus de la bottom-nav */
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
